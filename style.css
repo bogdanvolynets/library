@@ -1,0 +1,225 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  max-width: 1140px;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#3f87a6), to(#ebf8e1));
+  background: linear-gradient(to right, #3f87a6, #ebf8e1);
+  font-family: 'Sanchez', serif;
+  line-height: 1.3;
+  padding: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.blur > *:not(.form) {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-shadow: 2px 1px 5px #fff;
+}
+
+button {
+  display: block;
+  place-items: center;
+  font-size: 1.25rem;
+  padding: 12px 20px;
+  margin: 30px auto;
+  border: 2px solid #000;
+  border-radius: 5px;
+  color: #000;
+  font-family: 'Sanchez', serif;
+  font-weight: 700;
+  background: transparent;
+  outline: 0;
+  cursor: pointer;
+}
+
+.form {
+  width: 100%;
+  max-width: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 75px 20px 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#3f87a6), to(#9ac3c5));
+  background: linear-gradient(to right, #3f87a6, #9ac3c5);
+  border: 2px solid #fff;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.form input {
+  padding: 15px 10px;
+  outline: 0;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  color: #7c7c7c;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: #7c7c7c;
+}
+
+.form input:-ms-input-placeholder {
+  color: #7c7c7c;
+}
+
+.form input::-ms-input-placeholder {
+  color: #7c7c7c;
+}
+
+.form input::placeholder {
+  color: #7c7c7c;
+}
+
+.form button {
+  margin-bottom: 0;
+}
+
+.form.hidden {
+  visibility: hidden;
+}
+
+.form .cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8rem;
+  text-align: right;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.is-read {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-read label {
+  font-size: 1.4rem;
+  margin-right: 8px;
+}
+
+.is-read input {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  .form {
+    width: 90%;
+  }
+}
+
+.book-shelf {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-top: 30px;
+}
+
+.book-shelf div {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.book-shelf div * {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.book-shelf div #deleteBook {
+  position: absolute;
+  font-size: 1.6rem;
+  text-align: right;
+  color: red;
+  cursor: pointer;
+  right: 20px;
+  top: 14px;
+  z-index: 9999;
+}
+
+.book-shelf div h2 {
+  max-width: 90%;
+}
+
+.book-shelf div .box-of-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book-shelf div .box-of-checkbox label {
+  margin-bottom: 0;
+  margin-right: 8px;
+}
+
+.book-shelf div #read {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .book-shelf {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .book-shelf div {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .book-shelf {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=style.css.map */

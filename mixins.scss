@@ -1,0 +1,10 @@
+@mixin checkBoxStyle { 
+    width: 22px;
+    height: 22px;
+    margin: 0;
+}
+@mixin displayFlex($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

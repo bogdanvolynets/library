@@ -1,0 +1,45 @@
+.book-shelf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.book-shelf div {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.book-shelf div * {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.book-shelf div :last-child {
+  margin-bottom: 0;
+}
+
+.book-shelf div #deleteBook {
+  position: absolute;
+  font-size: 1.6rem;
+  text-align: right;
+  color: red;
+  cursor: pointer;
+  right: 20px;
+  top: 14px;
+  z-index: 9999;
+}
+/*# sourceMappingURL=book-shelf-styles.css.map */
